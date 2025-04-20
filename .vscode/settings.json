@@ -1,0 +1,9 @@
+{
+  "terminal.integrated.env.linux": {
+    "VSCODE_QT_FOLDER": "/home/ragnar/Qt/6.6.2/gcc_64"
+  },
+  "cmake.configureSettings": {
+    "CMAKE_C_COMPILER": "/usr/bin/gcc",
+    "CMAKE_CXX_COMPILER": "/usr/bin/g++"
+  }
+}
