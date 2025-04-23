@@ -1,6 +1,6 @@
-cmake_minimum_required(VERSION 3.1.0)
+cmake_minimum_required(VERSION 3.20.0)
 
-project(packet_sniffer VERSION 1.0.0 LANGUAGES CXX)
+project(swiper VERSION 1.0.0 LANGUAGES CXX C)
 
 # Enable compile commands export
 set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
@@ -47,7 +47,7 @@ add_executable(${PROJECT_NAME}
 target_include_directories(${PROJECT_NAME} 
     PRIVATE 
     include
-    ${CMAKE_CURRENT_BINARY_DIR}  # Add this for ui_mainwindow.h
+    ${CMAKE_CURRENT_BINARY_DIR}  
     ${PCAP_INCLUDE_DIRS}
 )
 
@@ -58,7 +58,6 @@ target_link_libraries(${PROJECT_NAME}
     ${PCAP_LIBRARIES}
 )
 
-# Add command to copy compile_commands.json to root directory
 add_custom_target(
     copy-compile-commands ALL
     ${CMAKE_COMMAND} -E copy_if_different
